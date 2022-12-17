@@ -4,14 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-
 namespace MS_TsetUserRegexSys
 {
     public class UserDetail
     {
-        public static bool Email(string userInput)
+        public static bool MobileNo(string userInput)
         {
-            string regexCondition = "^[a-z0-9]{1,}([._+-]{1}[a-z0-9]{1,}){0,1}[@]{1}[a-z0-9]{1,}[.]{1}[a-zA-Z]{2,3}([.]{1}[a-z]{2,3}){0,1}$";
+            string regexCondition = "^[9]{1}[1]{1}[ ]{1}[1-9]{1}[0-9]{9}$";
             if (Regex.IsMatch(userInput, regexCondition))
             {
                 Console.WriteLine("Validated successfully!\n");
