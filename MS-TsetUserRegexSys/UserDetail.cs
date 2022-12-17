@@ -8,9 +8,9 @@ namespace MS_TsetUserRegexSys
 {
     public class UserDetail
     {
-        public static bool MobileNo(string userInput)
+        public static bool PasswordMin8(string userInput)
         {
-            string regexCondition = "^[9]{1}[1]{1}[ ]{1}[1-9]{1}[0-9]{9}$";
+            string regexCondition = "^[a-zA-Z0-9]{8,}$";
             if (Regex.IsMatch(userInput, regexCondition))
             {
                 Console.WriteLine("Validated successfully!\n");

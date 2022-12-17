@@ -12,15 +12,13 @@ namespace MS_TsetUserRegexSys.Tests
     public class UserDetailTests
     {
         [TestMethod()]
-        [DataRow("91 9212354865")]    //pass
-        [DataRow("91 9945812348")]   //pass
-        [DataRow("91 08545641236")]     //fail
-        [DataRow("919354789654 ")]    //fail
-        public void TestFristName(string userInput)
+        [DataRow("Abc45678")]    //pass
+        [DataRow("Abcd567890")]   //pass
+        [DataRow("1234567")]     //fail
+        [DataRow("Abc123")]    //fail
+        public void TestFirstName(string userInput)
         {
-            
-            bool output = UserDetail.MobileNo(userInput);  
-
+            bool output = UserDetail.PasswordMin8(userInput);  
             Assert.AreEqual(output, true);
         }
     }
