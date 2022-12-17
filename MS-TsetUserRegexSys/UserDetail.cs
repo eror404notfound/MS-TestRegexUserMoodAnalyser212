@@ -9,9 +9,9 @@ namespace MS_TsetUserRegexSys
 {
     public class UserDetail
     {
-        public static bool LastName(string userInput)
+        public static bool Email(string userInput)
         {
-            string regexCondition = "^[A-Z]{1}[a-z]{2,}$";
+            string regexCondition = "^[a-z0-9]{1,}([._+-]{1}[a-z0-9]{1,}){0,1}[@]{1}[a-z0-9]{1,}[.]{1}[a-zA-Z]{2,3}([.]{1}[a-z]{2,3}){0,1}$";
             if (Regex.IsMatch(userInput, regexCondition))
             {
                 Console.WriteLine("Validated successfully!\n");

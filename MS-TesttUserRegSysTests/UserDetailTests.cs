@@ -12,12 +12,16 @@ namespace MS_TsetUserRegexSys.Tests
     public class UserDetailTests
     {
         [TestMethod()]
-        public void FirstNameTest()
+        [DataRow("abc@bl.com")]    //pass
+        [DataRow("abc.xyz@bl.co.in")]   //pass
+        [DataRow("abc123@gmail.a")]     //fail
+        [DataRow("abc.@gmail.com")]    //fail
+        public void TestFirstName(string userInput)
         {
+           
+            bool output = UserDetail.Email(userInput);     
 
-            string userInput = "Abc";
-            bool output = UserDetail.LastName(userInput);
-
+            
             Assert.AreEqual(output, true);
         }
     }

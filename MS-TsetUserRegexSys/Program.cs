@@ -12,7 +12,7 @@ namespace MS_TsetUserRegexSys
         {
             Console.WriteLine("User Registration using Regex.\n");
             string userInput = "Abc";
-            UserDetail.LastName(userInput);
+            UserDetail.Email(userInput);
 
         }
     }
