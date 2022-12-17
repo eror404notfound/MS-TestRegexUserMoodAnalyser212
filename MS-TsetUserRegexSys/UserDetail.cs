@@ -9,7 +9,7 @@ namespace MS_TsetUserRegexSys
 {
     public class UserDetail
     {
-        public static bool FirstName(string userInput)
+        public static bool LastName(string userInput)
         {
             string regexCondition = "^[A-Z]{1}[a-z]{2,}$";
             if (Regex.IsMatch(userInput, regexCondition))

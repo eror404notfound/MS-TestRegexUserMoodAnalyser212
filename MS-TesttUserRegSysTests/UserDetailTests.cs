@@ -16,7 +16,7 @@ namespace MS_TsetUserRegexSys.Tests
         {
 
             string userInput = "Abc";
-            bool output = UserDetail.FirstName(userInput);
+            bool output = UserDetail.LastName(userInput);
 
             Assert.AreEqual(output, true);
         }
