@@ -18,8 +18,8 @@ namespace MS_TsetUserRegexSys.Tests
         [DataRow("Abc123")]    //fail
         public void TestFirstName(string userInput)
         {
-
-            bool output = UserDetail.PasswordMin8UpperCase1(userInput);
+            
+            bool output = UserDetail.UpperCase1Numeric1(userInput); 
             Assert.AreEqual(output, true);
         }
     }
