@@ -8,9 +8,9 @@ namespace MS_TsetUserRegexSys
 {
     public class UserDetail
     {
-        public static bool PasswordMin8(string userInput)
+        public static bool PasswordMin8UpperCase1(string userInput)
         {
-            string regexCondition = "^[a-zA-Z0-9]{8,}$";
+            string regexCondition = "^(?=.*[A-Z]).{1,}[a-zA-Z0-9]{7,}$";
             if (Regex.IsMatch(userInput, regexCondition))
             {
                 Console.WriteLine("Validated successfully!\n");

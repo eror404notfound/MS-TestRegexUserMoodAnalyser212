@@ -14,11 +14,12 @@ namespace MS_TsetUserRegexSys.Tests
         [TestMethod()]
         [DataRow("Abc45678")]    //pass
         [DataRow("Abcd567890")]   //pass
-        [DataRow("1234567")]     //fail
+        [DataRow("a2345678")]     //fail
         [DataRow("Abc123")]    //fail
         public void TestFirstName(string userInput)
         {
-            bool output = UserDetail.PasswordMin8(userInput);  
+
+            bool output = UserDetail.PasswordMin8UpperCase1(userInput);
             Assert.AreEqual(output, true);
         }
     }

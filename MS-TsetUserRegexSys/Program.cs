@@ -12,7 +12,7 @@ namespace MS_TsetUserRegexSys
         {
             Console.WriteLine("User Registration using Regex.\n");
             string userInput = "Abc";
-            UserDetail.PasswordMin8(userInput);
+            UserDetail.PasswordMin8UpperCase1(userInput);
 
         }
     }
